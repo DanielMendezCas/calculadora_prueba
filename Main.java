@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-
+       // Se crea el objeto cal de la clase Calculadora para acceder a sus metodos y scanner para entrada de datos
         Calculadora cal = new Calculadora();
         Scanner scanner = new Scanner(System.in);
 
@@ -12,7 +12,8 @@ public class Main {
         double n1 = scanner.nextDouble();
         System.out.println("Ingrese el segundo operando");
         double n2 = scanner.nextDouble();
-
+        
+        //  Comprueba si algún operador tiene más de un decimal llamando al metodo declarado
         if (compruebaDecimal(n1) || compruebaDecimal(n2)) {
             System.out.println("Operando incorrecto, tiene más de un decimal");
         }else{
@@ -46,7 +47,7 @@ public class Main {
             }
         }
     }
-    
+    //La funcion convierte el numero a cadena y lo separa a aprtir del punto para comprobar si tiene mas de un decimal
     public static boolean compruebaDecimal(double n) {
         int decimales = String.valueOf(n).split("\\.")[1].length();
         return decimales > 1;

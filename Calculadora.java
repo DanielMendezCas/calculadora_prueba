@@ -20,6 +20,7 @@ public class Calculadora {
         return redondo(divi);
     }
   
+    // El metodo toma un numero double y lo formatea para que tenga solo dos decimales para poder redondearlo  
      public static String redondo(double a) {
         return String.format("%.2f", a);
     }
